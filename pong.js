@@ -1,3 +1,13 @@
+
+//count accesses
+if (localStorage.hasOwnProperty('count')){
+    var counter = localStorage.getItem('count');
+    counter ++;
+    localStorage.setItem('count', counter);
+}else{
+    localStorage.setItem('count', 1);
+}
+
 //select canvas
 const cvs = document.getElementById("pong");
 const ctx = cvs.getContext("2d");
@@ -70,6 +80,12 @@ function drawText(text,x,y,color){
     ctx.fillText(text,x,y);
 }
 
+function drawSmallText(text,x,y,color){
+    ctx.fillStyle = color;
+    ctx.font = "12px fantasy";
+    ctx.fillText(text,x,y);
+}
+
 function drawNet(){
     for(let i = 0; i <= cvs.height; i+=15){
         drawRect(net.x,net.y+i,net.width,net.height,net.color);
@@ -87,6 +103,8 @@ function render(){
     drawText(com.score,3*cvs.width/4,cvs.height/5,"WHITE");
     //draw level
     drawText("level "+Math.round(com.level*10),4*cvs.width/6,4*cvs.height/5,"WHITE");
+    //draw counter
+    drawSmallText("access count: "+counter,cvs.width/30,29*cvs.height/30,"WHITE");
     //draw paddles
     drawRect(user.x,user.y,user.width,user.height,user.color);
     drawRect(com.x,com.y,com.width,com.height,com.color);
@@ -214,6 +232,7 @@ function game(){
     update();
     render();
 }
+
 
 //loop
 const framePerSecond=50;
