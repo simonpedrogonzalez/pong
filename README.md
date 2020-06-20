@@ -1,5 +1,5 @@
 # Pong
-Simple pong game with js and html5
+Simple pong game with js and html5. Based in https://www.youtube.com/watch?v=nl0KXCa5pJk tutorial. Physics fix for some buggy things, levels and sound added.
 ## Getting Started
 1. Just open the html with the browser
 2. Enable auto play sound in the browser. In firefox is Configuración>Privacidad y seguridad>Autoreproducción (do not forget to deactivate after playing, it may cause security issues). In chrome Configuración>Privacidad y Seguridad>Avanzada>Configuracion del sitio>Sonido
