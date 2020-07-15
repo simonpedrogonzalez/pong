@@ -12,4 +12,5 @@ This will install lite-server (defined in package.json), a static server that lo
 Wait a second and index.html is loaded and displayed in your default browser served by your local web server!
 ### Prerequisites
 Node.js, npm
-
+## How to play
+mouse controls the position of the player. Press P for pause, M for muting/unmuting sound. Moving the mouse from left to right rapidly just before hitting the ball will increase its speed, moving it from right to left will decrease it. Holding shift immobilizes the player to get stability, in order to perform the movements previously described. Press Q to teleport to backward/forward postition. Pres S to slow time.
